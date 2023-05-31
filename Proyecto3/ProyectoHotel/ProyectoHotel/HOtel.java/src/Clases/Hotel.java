@@ -412,7 +412,10 @@ public class Hotel implements Serializable{
     	
     }
 
-    public void cargarHabitacionesManual(String idHabitacion,String tipo,String ubicacion, int capacidadNino, int capaciodadAdulto, Boolean balcon, Boolean cocina, Boolean vista, float PrecioI){
+    public void cargarHabitacionesManual(String idHabitacion,String tipo,String ubicacion, int capacidadNino, int capaciodadAdulto,
+    		Boolean balcon, Boolean cocina, Boolean vista, float PrecioI, int tamanio, Boolean aire, Boolean calefaccion, String tamCama, Boolean tv, Boolean cafetera,
+			Boolean elemHipoalergenicos, Boolean plancha, Boolean secador, Boolean voltajeAC, Boolean usbA,
+			Boolean usbC, Boolean desayuno){
 	
 			//String idHabitacion = frame.getIDHabitacion();
 			//String tipo = frame.getTipo();
@@ -430,22 +433,25 @@ public class Hotel implements Serializable{
 			//Boolean cocina = Boolean.parseBoolean(input("Ingrese true si la habitacion tiene Cocina, si no ingrese false"));
 			//Boolean vista = Boolean.parseBoolean(input("Ingrese true si la habitacion tiene Vista, si no ingrese false"));
 			//float PrecioI = Float.parseFloat(input("Ingrese el precio base de la habitacion"));
-
+    		
 			if (tipo.equals("Standar")) {
-				Standard habitacion = new Standard(idHabitacion, tipo, ubicacion, capacidadNino,
-						capaciodadAdulto, balcon, cocina, vista, PrecioI);
+				Standard habitacion = new Standard(idHabitacion, tipo, ubicacion, capacidadNino, capaciodadAdulto,
+						balcon, cocina, vista, PrecioI, tamanio, aire, calefaccion, tamCama, tv, cafetera,
+						elemHipoalergenicos, plancha, secador, voltajeAC, usbA, usbC, desayuno);
 				habitaciones.add(habitacion);
 
 			}
 			else if (tipo.equals("Suite")) {
-				Suite habitacion = new Suite(idHabitacion, tipo, ubicacion, capacidadNino,
-						capaciodadAdulto, balcon, cocina, vista, PrecioI);
+				Suite habitacion = new Suite(idHabitacion, tipo, ubicacion, capacidadNino, capaciodadAdulto,
+						balcon, cocina, vista, PrecioI, tamanio, aire, calefaccion, tamCama, tv, cafetera,
+						elemHipoalergenicos, plancha, secador, voltajeAC, usbA, usbC, desayuno);
 				habitaciones.add(habitacion);
 
 			}
 			else if (tipo.equals("SuitDoble")) {				
-				SuitDoble habitacion = new SuitDoble(idHabitacion, tipo, ubicacion, capacidadNino,
-						capaciodadAdulto, balcon, cocina, vista, PrecioI);
+				SuitDoble habitacion = new SuitDoble(idHabitacion, tipo, ubicacion, capacidadNino, capaciodadAdulto,
+						balcon, cocina, vista, PrecioI, tamanio, aire, calefaccion, tamCama, tv, cafetera,
+						elemHipoalergenicos, plancha, secador, voltajeAC, usbA, usbC, desayuno);
 				habitaciones.add(habitacion);
 			}
 	}
@@ -648,21 +654,38 @@ public class Hotel implements Serializable{
 			Boolean cocina = Boolean.parseBoolean(datos[6]);
 			Boolean vista = Boolean.parseBoolean(datos[7]);
 			float PrecioI = Float.parseFloat(datos[8]);
+			int tamanio = Integer.parseInt(datos[9]);
+			Boolean aire = Boolean.parseBoolean(datos[10]);
+			Boolean calefaccion = Boolean.parseBoolean(datos[11]);
+			String tamCama = datos[12];
+			Boolean tv = Boolean.parseBoolean(datos[13]);
+			Boolean cafetera = Boolean.parseBoolean(datos[14]);
+			Boolean elemHipoalergenicos = Boolean.parseBoolean(datos[15]);
+			Boolean plancha = Boolean.parseBoolean(datos[16]);
+			Boolean secador = Boolean.parseBoolean(datos[17]);
+			Boolean voltajeAC = Boolean.parseBoolean(datos[18]);
+			Boolean usbA = Boolean.parseBoolean(datos[19]);
+			Boolean usbC = Boolean.parseBoolean(datos[20]);
+			Boolean desayuno = Boolean.parseBoolean(datos[21]);
 			
 			if (tipo.equals("Standar")) {
-				Standard habitacion = new Standard(idHabitacion, tipo, ubicacion, capacidadNino,
-						capaciodadAdulto, balcon, cocina, vista, PrecioI);
+				Habitacion habitacion = new Standard(idHabitacion, tipo, ubicacion, capacidadNino, capaciodadAdulto,
+						balcon, cocina, vista, PrecioI, tamanio, aire, calefaccion, tamCama, tv, cafetera,
+						elemHipoalergenicos, plancha, secador, voltajeAC, usbA, usbC, desayuno);
 				habitaciones.add(habitacion);
 				
 			}
 			else if (tipo.equals("Suite")) {
-				Suite habitacion = new Suite(idHabitacion, tipo, ubicacion, capacidadNino,
-						capaciodadAdulto, balcon, cocina, vista, PrecioI);
+				Habitacion habitacion = new Suite(idHabitacion, tipo, ubicacion, capacidadNino, capaciodadAdulto,
+						balcon, cocina, vista, PrecioI, tamanio, aire, calefaccion, tamCama, tv, cafetera,
+						elemHipoalergenicos, plancha, secador, voltajeAC, usbA, usbC, desayuno);
 				habitaciones.add(habitacion);
 				
 			}
-			else if (tipo.equals("SuitDoble")) {				SuitDoble habitacion = new SuitDoble(idHabitacion, tipo, ubicacion, capacidadNino,
-						capaciodadAdulto, balcon, cocina, vista, PrecioI);
+			else if (tipo.equals("SuitDoble")) {
+				Habitacion habitacion = new SuitDoble(idHabitacion, tipo, ubicacion, capacidadNino, capaciodadAdulto,
+						balcon, cocina, vista, PrecioI, tamanio, aire, calefaccion, tamCama, tv, cafetera,
+						elemHipoalergenicos, plancha, secador, voltajeAC, usbA, usbC, desayuno);
 				habitaciones.add(habitacion);
 			}
         }

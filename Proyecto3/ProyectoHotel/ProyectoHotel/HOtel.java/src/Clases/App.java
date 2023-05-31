@@ -83,8 +83,13 @@ public class App {
 			e.printStackTrace();
 		}
 	}
-	public void cargarHabitacionesManual(String idHabitacion,String tipo,String ubicacion, int capacidadNino, int capaciodadAdulto, Boolean balcon, Boolean cocina, Boolean vista, float PrecioI){
-		hotel.cargarHabitacionesManual(idHabitacion, tipo, ubicacion, capacidadNino, capaciodadAdulto, balcon, cocina, vista, PrecioI);
+	public void cargarHabitacionesManual(String idHabitacion,String tipo,String ubicacion, int capacidadNino, int capaciodadAdulto,
+    		Boolean balcon, Boolean cocina, Boolean vista, float PrecioI, int tamanio, Boolean aire, Boolean calefaccion, String tamCama, Boolean tv, Boolean cafetera,
+			Boolean elemHipoalergenicos, Boolean plancha, Boolean secador, Boolean voltajeAC, Boolean usbA,
+			Boolean usbC, Boolean desayuno){
+		hotel.cargarHabitacionesManual(idHabitacion, tipo, ubicacion, capacidadNino, capaciodadAdulto,
+				balcon, cocina, vista, PrecioI, tamanio, aire, calefaccion, tamCama, tv, cafetera,
+				elemHipoalergenicos, plancha, secador, voltajeAC, usbA, usbC, desayuno);
 	}
     public void cargarServiciosManual(String tipo, String nombre, float precio, String horaInicio, String horaFinal){
 		hotel.cargarServiciosManual(tipo, nombre, precio, horaInicio, horaFinal);
