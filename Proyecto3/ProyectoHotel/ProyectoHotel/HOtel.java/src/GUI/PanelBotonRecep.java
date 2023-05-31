@@ -165,7 +165,7 @@ public class PanelBotonRecep extends JPanel implements ActionListener{
 			}
 			else if (opcion.equals("2")) {
 				String respuesta = interfaz.consultarHabitacion(1,IDHabitacion, 0,0,0);
-				JOptionPane.showMessageDialog(interfaz,respuesta);
+				JOptionPane.showMessageDialog(interfaz,respuesta + "\nEl hotel cuenta con parqueadero gratuito, piscina, zonas humedas, wifi gratis, recepcion 24 horas, zonas BBQ y es pet friendly!");
 			}
 			
 			
