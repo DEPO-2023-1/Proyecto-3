@@ -17,8 +17,15 @@ public class Hotel implements Serializable{
     private ArrayList<Habitacion> habitaciones;
     private ArrayList<Inventario> inventarios;
     private ArrayList<MenuRestaurante> productos;
- 
-    
+	private boolean parqueaderoPago;
+	private boolean parqueaderoGratuito;
+	private boolean piscina;
+	private boolean zonasHumedas;
+	private boolean bbq;
+	private boolean wifiGratis;
+	private boolean recepcion24h;
+	private boolean admiteMascotas;
+	
   //public static Frame frame;
 
     public Hotel(){
@@ -27,6 +34,15 @@ public class Hotel implements Serializable{
     	this.consumosHotel = new ArrayList<ConsumoHot>();
     	this.habitaciones = new ArrayList<Habitacion>();
     	this.inventarios = new ArrayList<Inventario>();
+		this.parqueaderoGratuito = true;
+		this.parqueaderoPago = false;
+		this.piscina = true;
+		this.zonasHumedas = true;
+		this.bbq = true;
+		this.wifiGratis = true;
+		this.recepcion24h = true;
+		this.admiteMascotas = true;
+
     	
     }
 
